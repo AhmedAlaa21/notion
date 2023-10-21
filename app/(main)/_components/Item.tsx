@@ -81,7 +81,7 @@ export const Item = ({
         if (!expanded) {
           onExpand?.();
         }
-        // router.push(`/document/${documentId}`);
+        router.push(`/documents/${documentId}`);
       }
     );
     toast.promise(promise, {
@@ -100,6 +100,7 @@ export const Item = ({
       return "ctrl";
     }
   };
+
   return (
     <div
       onClick={onClick}
@@ -114,7 +115,7 @@ export const Item = ({
       {!!id && (
         <div
           className="h-full rounded-sm hover:bg-neutral-300
-        dark:bg-neutral-600 mr-1"
+        dark:hover:bg-neutral-600 mr-1"
           role="button"
           onClick={handleExpand}
         >
